@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageVersion>0.1.0</PackageVersion>
+        <AssemblyVersion>0.1.0</AssemblyVersion>
+        <AssemblyName>Web3.fs.UnitTester</AssemblyName>
+        <RootNamespace>Web3.fs.UnitTester</RootNamespace>
+        <PackageId>Web3.fs.UnitTester</PackageId>
+        <Title>UnitTester</Title>
+        <Authors>jmhickman</Authors>
+        <Description>Unit Testing bindings for UnitTesting.sol</Description>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Library.fs" />
+        <None Include="Test.fsx" />   
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="FSharp.Data">
+        <HintPath>..\..\..\.nuget\packages\fsharp.data\4.2.7\lib\netstandard2.0\FSharp.Data.dll</HintPath>
+      </Reference>
+      <Reference Include="FSharp.Json">
+        <HintPath>..\..\..\.nuget\packages\fsharp.json\0.4.1\lib\netstandard2.0\FSharp.Json.dll</HintPath>
+      </Reference>
+      <Reference Include="FsHttp">
+        <HintPath>..\..\..\.nuget\packages\fshttp\9.0.6\lib\net6.0\FsHttp.dll</HintPath>
+      </Reference>
+      <Reference Include="SHA3Core">
+        <HintPath>..\..\..\.nuget\packages\sha3core\1.0.1\lib\netstandard2.0\SHA3Core.dll</HintPath>
+      </Reference>
+      <Reference Include="Web3.fs">
+        <HintPath>..\web3.fs\bin\Release\net6.0\web3.fs.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>
